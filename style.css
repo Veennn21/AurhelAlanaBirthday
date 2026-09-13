@@ -198,7 +198,28 @@ p {
   user-select: none;
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
+    p {
+      font-family: 'Zeyada';
+      font-size: clamp(30px, 9vw, 70px);
+      color: rgb(0, 0, 100);
+      opacity: 0.75;
+      user-select: none;
+  }
+
+  .instruction {
+    width: 92vw !important;
+    max-width: 92vw !important;
+    min-height: 320px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* @media (max-width: 480px) {
   .paper {
     padding: 14px clamp(14px, 8vw, 50px);
     max-width: 90vw;
@@ -211,4 +232,4 @@ p {
   body {
     background-size: 500px;
   }
-}
+} */
