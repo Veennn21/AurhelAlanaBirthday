@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 1000px;
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  background-position: center center;
+  overflow: hidden;
+}
+
+.paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+  background-size: 500px;
+  background-position: center center;
+  z-index: -1;
+}
+
+.paper {
+  background-image: none;
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px clamp(20px, 10vw, 100px);
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  max-width: min(85vw, 420px);
+  touch-action: none;
+}
+
+
+/* .paper {
+  background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px clamp(20px, 10vw, 100px);
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  max-width: min(85vw, 420px);
+  touch-action: none;
+} */
+
+.paper.heart {
+  position: relative;
+  width: clamp(120px, 35vw, 200px);
+  height: clamp(120px, 35vw, 200px);
+  padding: 0;
+  border-radius: 50%;
+  max-width: none;
+  overflow: hidden;
+
+  /* bikin isi tepat di tengah */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper.heart p {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper.heart img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+/* .paper.heart {
+  position: relative;
+  width: clamp(120px, 35vw, 200px);
+  height: clamp(120px, 35vw, 200px);
+  padding: 0;
+  border-radius: 50%;
+  max-width: none;
+} */
+
+.paper.image {
+  padding: 10px;
+}
+
+.paper.image p {
+  text-align: center;
+  font-size: clamp(18px, 6vw, 30px);
+}
+
+img {
+  max-height: 200px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+/* img {
+  max-height: 200px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+} */
+
+.cake {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cake > img {
+  width: 30%;
+  height: 30%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  transform: translateY(-13px);
+}
+
+.circle-text {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.circle-text text {
+  font-family: 'Zeyada', cursive;
+  font-size: 23px;
+  font-weight: bold;
+  fill: #111;
+}
+
+.circle-text .bottom-text {
+  font-size: 27px;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994_340.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+.paper.red {
+  filter: none;
+}
+
+/* .paper:nth-of-type(3n) {
+  background-position: left top;
+  filter: hue-rotate(200deg);
+} */
+
+.paper:nth-of-type(3n)::before {
+  background-position: left top;
+  filter: hue-rotate(200deg);
+}
+
+p {
+  font-family: 'Zeyada';
+  font-size: clamp(24px, 7vw, 50px);
+  color: rgb(0, 0, 100);
+  opacity: 0.75;
+  user-select: none;
+}
+
+@media (max-width: 480px) {
+  .paper {
+    padding: 14px clamp(14px, 8vw, 50px);
+    max-width: 90vw;
+  }
+
+  .paper.image {
+    padding: 8px;
+  }
+
+  body {
+    background-size: 500px;
+  }
+}
