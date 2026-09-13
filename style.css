@@ -42,19 +42,6 @@ body {
   touch-action: none;
 }
 
-
-/* .paper {
-  background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
-  background-size: 500px;
-  background-position: center center;
-  padding: 20px clamp(20px, 10vw, 100px);
-  transform: rotateZ(-5deg);
-  box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  max-width: min(85vw, 420px);
-  touch-action: none;
-} */
-
 .paper.heart {
   position: relative;
   width: clamp(120px, 35vw, 200px);
@@ -63,8 +50,6 @@ body {
   border-radius: 50%;
   max-width: none;
   overflow: hidden;
-
-  /* bikin isi tepat di tengah */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,14 +70,6 @@ body {
   height: 80%;
   object-fit: contain;
 }
-/* .paper.heart {
-  position: relative;
-  width: clamp(120px, 35vw, 200px);
-  height: clamp(120px, 35vw, 200px);
-  padding: 0;
-  border-radius: 50%;
-  max-width: none;
-} */
 
 .paper.image {
   padding: 10px;
@@ -113,16 +90,6 @@ img {
   -webkit-user-drag: none;
   pointer-events: none;
 }
-/* img {
-  max-height: 200px;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  user-select: none;
-  -webkit-user-drag: none;
-  pointer-events: none;
-} */
 
 .cake {
   position: relative;
@@ -180,11 +147,6 @@ img {
   filter: none;
 }
 
-/* .paper:nth-of-type(3n) {
-  background-position: left top;
-  filter: hue-rotate(200deg);
-} */
-
 .paper:nth-of-type(3n)::before {
   background-position: left top;
   filter: hue-rotate(200deg);
@@ -218,18 +180,3 @@ p {
     text-align: center;
   }
 }
-
-/* @media (max-width: 480px) {
-  .paper {
-    padding: 14px clamp(14px, 8vw, 50px);
-    max-width: 90vw;
-  }
-
-  .paper.image {
-    padding: 8px;
-  }
-
-  body {
-    background-size: 500px;
-  }
-} */
